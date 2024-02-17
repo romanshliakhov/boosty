@@ -1,8 +1,8 @@
 header {
   width: 100%;
-  // position: fixed;
+  position: absolute;
   padding: 20px 0;
-  background-color: var(--color-main);
+  background-color: transparent;
   z-index: 20;
 }
 

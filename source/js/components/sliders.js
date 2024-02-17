@@ -1,17 +1,18 @@
 import Swiper from '../vendor/swiper.js';
 
-// // slider partners top
-// let partnersSliderTop = new Swiper('.partners__slider-top', {
-//   observer: true,
-//   observeParents: true,
-//   spaceBetween: 30,
-//   slidesPerView: 'auto',
-//   speed: 8000,
-//   loop: true,
-//   autoplay: {
-//     delay: 0,
-//   },
-// });
+// slider partners top
+let heroSlider = new Swiper('.hero__slider', {
+  observer: true,
+  observeParents: true,
+  spaceBetween: 30,
+  slidesPerView: 'auto',
+  speed: 8000,
+  loop: true,
+  autoplay: {
+    delay: 0,
+  },
+});
+
 // Reasons
 let reasonsSlider = new Swiper('.reasons__slider', {
   slidesPerView: 'auto',
@@ -19,11 +20,11 @@ let reasonsSlider = new Swiper('.reasons__slider', {
   observer: true,
   observeParents: true,
   loop: true,
-  navigation: {
-    nextEl: ".reasons-next",
-    prevEl: ".reasons-prev",
-    clickable: true,
-  },
+  // navigation: {
+  //   nextEl: ".reasons-next",
+  //   prevEl: ".reasons-prev",
+  //   clickable: true,
+  // },
 });
 
 // Feedbacks

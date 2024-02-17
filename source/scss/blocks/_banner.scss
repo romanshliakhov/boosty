@@ -1,0 +1,36 @@
+.banner {
+  padding-bottom: 100px;
+
+  &__wrapp {
+    padding: 55px 80px;
+    display: grid;
+    grid-template-columns: 545px 1fr;
+    align-items: center;
+    grid-gap: 60px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__image {
+    display: flex;
+  }
+
+  &__btn {
+    span {
+      width: 80px;
+      height: 80px;
+      background-color: var(--color-yellow);
+
+      svg {
+        fill: var(--color-main-bg);
+      }
+    }
+  }
+}

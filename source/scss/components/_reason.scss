@@ -1,0 +1,21 @@
+.reason {
+  height: 100%;
+  padding: 30px 40px 40px;
+  border: 1px solid rgba(251, 248, 243, 0.2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  &__image {
+    display: flex;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+  }
+}

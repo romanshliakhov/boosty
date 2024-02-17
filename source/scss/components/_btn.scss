@@ -1,0 +1,20 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 20px;
+  font-family: var(--font-family-twk);
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+
+  &:hover {
+    color: var(--color-link-hover);
+
+    span {
+      transform: translateX(4px);
+      background-color: #ffffff3a;
+    }
+  }
+
+}

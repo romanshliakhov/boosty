@@ -1,0 +1,112 @@
+.services {
+  margin-top: -100px;
+  margin-bottom: 100px;
+  background: linear-gradient(180deg, #1b1922 0%, #0e0c16 100%);
+  border-radius: 30px;
+
+  &__wrapp {
+    padding-top: 100px;
+  }
+
+  &__tabs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__tabcontent {
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    &-item {
+      padding: 17px 0;
+      border: 1px solid var(--color-green-light);
+      border-radius: 100px;
+      backdrop-filter: blur(50px);
+      font-size: 20px;
+      line-height: 150%;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--color-primary);
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      span {
+        pointer-events: none;
+      }
+
+      &:hover,
+      &.active {
+        background-color: var(--color-green-light);
+        border: 1px solid transparent;
+        color: var(--color-main-bg);
+      }
+    }
+  }
+
+
+  &__descr {
+    max-width: 656px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    color: var(--color-primary);
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__detail {
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(50px);
+    background-color: rgba(217, 217, 217, 0.05);
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 30px;
+
+    &-icon {
+      display: flex;
+    }
+
+    &-heading {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 150%;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--color-primary);
+    }
+
+    &-text {
+      display: block;
+      margin-bottom: 40px;
+      color: rgba(251, 248, 243, 0.7);
+    }
+
+    &-btn {
+      color: var(--color-green);
+
+      span {
+        background-color: transparent;
+        border: 1px solid rgba(251, 248, 243, 0.2);
+
+        svg {
+          fill: var(--color-green);
+        }
+      }
+    }
+  }
+}

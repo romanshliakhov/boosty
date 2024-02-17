@@ -1,0 +1,19 @@
+.recents {
+  margin-bottom: 100px;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    width: 100%;
+  }
+}

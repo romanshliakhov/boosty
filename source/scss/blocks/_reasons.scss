@@ -1,0 +1,20 @@
+.reasons {
+  margin-bottom: 100px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    margin-top: 40px;
+    margin-left: -80px;
+    width: calc(100% + 80px);
+  }
+
+  &__slide {
+    max-width: 380px;
+    height: auto;
+  }
+}

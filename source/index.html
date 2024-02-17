@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <section class="apart">
+        <div class="container">
+          <div class="apart__wrapp">
+            <h2 class="apart__title">What sets us apart?</h2>
+
+            <p class="apart__descr"><span>With Boosty Labs</span>, you can expect seamless integration, personalized solutions, and unparalleled support. Discover what we can do for you and take your business to the next level.</p>
+
+            <ul class="apart__info">
+              <li>
+                <span>12</span>
+                <p>Years of experience in <br> the blockchain space</p>
+              </li>
+              <li>
+                <span>900+</span>
+                <p>successful projects <br> completed</p>
+              </li>
+              <li>
+                <span>280</span>
+                <p>satisfied clients <br> served worldwide</p>
+              </li>
+              <li>
+                <span>80</span>
+                <p>highly skilled engineers <br> and strategists</p>
+              </li>
+            </ul>
+
+
+            <button class="apart__btn btn">
+              <p>About Boosty Labs</p>
+
+              <span class="icon">
+                <svg width='22' height='22'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <services class="services">
+        <div class="container">
+          <div class="services__wrapp">
+            <h2 class="services__title">Our Trailblazing Service</h2>
+
+            <div class="services__tabs tabs">
+              <ul class="services__controls">
+                <li class="services__controls-item tablinks active" tabs-btn="startups">
+                  <span>For Startups</span>
+                </li>
+                <li class="services__controls-item tablinks" tabs-btn="enterprises">
+                  <span>For Enterprises</span>
+                </li>
+              </ul>
+
+              <ul class="services__tabcontents">
+                <li class="services__tabcontent tabcontent active" tabs-content="startups">
+                  <div class="services__descr">
+                    <p>Take your innovative ideas to the next level with Boosty Labs, a cutting-edge partner for startups looking to make their mark in the digital world.</p>
+
+                    <p>We offer a comprehensive suite of services designed to accelerate your growth and secure your success:</p>
+                  </div>
+
+                  <ul class="services__details">
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#blockchain'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">Blockchain Expertise</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#fintech'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">Fintech Solutions</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#cloud'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">Cloud Computing</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#ai'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">AI/ML</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="services__tabcontent tabcontent" tabs-content="enterprises">
+                  <div class="services__descr">
+                    <p>Take your innovative ideas to the next level with Boosty Labs, a cutting-edge partner for startups looking to make their mark in the digital world.</p>
+                  </div>
+
+                  <ul class="services__details">
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#blockchain'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">Blockchain Expertise</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#fintech'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">Fintech Solutions</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#cloud'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">Cloud Computing</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="services__detail">
+                      <div class="services__detail-icon">
+                        <svg width='60' height='60'>
+                          <use href='img/sprite/sprite.svg#ai'></use>
+                        </svg>
+                      </div>
+
+                      <div class="services__detail-info">
+                        <div class="services__detail-heading">AI/ML</div>
+
+                        <p class="services__detail-text">From decentralized applications to smart contracts and asset tokenization, we help you harness the power of blockchain technology.</p>
+
+                        <a class="services__detail-btn btn" href="#">
+                          <p>Learn more</p>
+
+                          <span class="icon">
+                            <svg width='22' height='22'>
+                              <use href='img/sprite/sprite.svg#arrow-right'></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </services>
+
+      <section class="consultation">
+        <div class="container">
+          <div class="consultation__wrapp">
+            <h2 class="consultation__title">Expert Consultation Awaits</h2>
+
+            <p class="consultation__descr">Elevate your business strategy with Boosty Labs' expert consulting in Web3, Blockchain, and other advanced technologies, tailored for enterprises.</p>
+
+            <div class="consultation__btns">
+              <button class="consultation__btn btn">
+                <p>Book Your Consultation Now</p>
+
+                <span class="icon">
+                  <svg width='22' height='22'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </span>
+              </button>
+
+              <a class="consultation__more" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reasons">
+        <div class="container">
+          <div class="reasons__top">
+            <h2 class="reasons__title">Why Partner with Boosty Labs?</h2>
+
+            <div class="controls">
+              <div class="reasons-prev controls__btn controls__btn--prev">
+                <svg width='22' height='22'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </div>
+              <div class="reasons-next controls__btn">
+                <svg width='22' height='22'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reasons__slider swiper-container">
+          <div class="reasons__slider-wrapper swiper-wrapper">
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/remote.webp'>
+                    <img width='150' height='150' src='img/reasons/remote.png' alt='Remote Team Architects'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Remote Team Architects</div>
+
+                <p class="reason__descr">We've successfully assembled high-caliber remote engineering and design teams for global companies. Let us craft your ideal team from the get-go.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/startup.webp'>
+                    <img width='150' height='150' src='img/reasons/startup.png' alt='Startup Champions'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Startup Champions</div>
+
+                <p class="reason__descr">As seasoned veterans of building startups, we intimately understand your challenges and deliver exceptional software development & expertise backed by our extensive market knowledge.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/product.webp'>
+                    <img width='150' height='150' src='img/reasons/product.png' alt='Product Innovation Catalysts'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Product Innovation Catalysts</div>
+
+                <p class="reason__descr">As your strategic partners, we accelerate product development, outperforming market rivals. We've established a global presence, pioneering fintech innovations in emerging niches.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/architects.webp'>
+                    <img width='150' height='150' src='img/reasons/architects.png' alt='Remote Team Architects'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Remote Team Architects</div>
+
+                <p class="reason__descr">We've successfully assembled high-caliber remote engineering and design teams for global companies. Let us craft your ideal team from the get-go.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/remote.webp'>
+                    <img width='150' height='150' src='img/reasons/remote.png' alt='Remote Team Architects'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Remote Team Architects</div>
+
+                <p class="reason__descr">We've successfully assembled high-caliber remote engineering and design teams for global companies. Let us craft your ideal team from the get-go.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/startup.webp'>
+                    <img width='150' height='150' src='img/reasons/startup.png' alt='Startup Champions'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Startup Champions</div>
+
+                <p class="reason__descr">As seasoned veterans of building startups, we intimately understand your challenges and deliver exceptional software development & expertise backed by our extensive market knowledge.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/product.webp'>
+                    <img width='150' height='150' src='img/reasons/product.png' alt='Product Innovation Catalysts'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Product Innovation Catalysts</div>
+
+                <p class="reason__descr">As your strategic partners, we accelerate product development, outperforming market rivals. We've established a global presence, pioneering fintech innovations in emerging niches.</p>
+              </div>
+            </div>
+            <div class="reasons__slide swiper-slide">
+              <div class="reason">
+                <div class="reason__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/reasons/architects.webp'>
+                    <img width='150' height='150' src='img/reasons/architects.png' alt='Remote Team Architects'>
+                  </picture>
+                </div>
+
+                <div class="reason__title">Remote Team Architects</div>
+
+                <p class="reason__descr">We've successfully assembled high-caliber remote engineering and design teams for global companies. Let us craft your ideal team from the get-go.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recents">
+        <div class="container">
+          <div class="recents__wrapp">
+            <div class="recents__top">
+              <h2 class="recents__title">Recent articles</h2>
+
+              <div class="recents__controls controls">
+                <div class="recents-prev controls__btn controls__btn--prev">
+                  <svg width='22' height='22'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </div>
+                <div class="recents-next controls__btn">
+                  <svg width='22' height='22'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="recents__slider swiper-container">
+              <div class="recents__slider-wrapper swiper-wrapper">
+                <div class="recents__slide swiper-slide">
+                  <div class="recent">
+                    <div class="recent__image">
+                      <picture>
+                        <img width='200' height='150' src='img/recent/blockchain.png' alt='Blockchain Technologies as a Tool for the Mortgage Loans Digitalization'>
+                      </picture>
+                    </div>
+
+                    <a class="recent__link" href="#">Blockchain Technologies as a Tool for the Mortgage Loans Digitalization</a>
+                  </div>
+                </div>
+                <div class="recents__slide swiper-slide">
+                  <div class="recent">
+                    <div class="recent__image">
+                      <picture>
+                        <img width='200' height='150' src='img/recent/edge.png' alt='Edge Computing & 5G: Big Promises'>
+                      </picture>
+                    </div>
+
+                    <a class="recent__link" href="#">Edge Computing & 5G:<br> Big Promises</a>
+                  </div>
+                </div>
+                <div class="recents__slide swiper-slide">
+                  <div class="recent">
+                    <div class="recent__image">
+                      <picture>
+                        <img width='200' height='150' src='img/recent/blockchain.png' alt='Blockchain Technologies as a Tool for the Mortgage Loans Digitalization'>
+                      </picture>
+                    </div>
+
+                    <a class="recent__link" href="#">Blockchain Technologies as a Tool for the Mortgage Loans Digitalization</a>
+                  </div>
+                </div>
+                <div class="recents__slide swiper-slide">
+                  <div class="recent">
+                    <div class="recent__image">
+                      <picture>
+                        <img width='200' height='150' src='img/recent/edge.png' alt='Edge Computing & 5G: Big Promises'>
+                      </picture>
+                    </div>
+
+                    <a class="recent__link" href="#">Edge Computing & 5G:<br> Big Promises</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="coloboration">
+        <div class="container">
+          <div class="coloboration__wrapp">
+            <div class="coloboration__info">
+              <h2 class="coloboration__title">Our Collaboration <span><p>Approach</p></span></h2>
+
+              <button class="apart__btn btn">
+                <p>Discuss our collaboration</p>
+
+                <span class="icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <ul class="coloboration__details">
+              <li class="coloboration__detail">
+                <span>Team Extension</span>
+                <p>A fully committed remote team or individual expertly integrated into your current team. We handle the logistics, so you can concentrate on your project.</p>
+              </li>
+              <li class="coloboration__detail">
+                <span>Project-based</span>
+                <p>A well-defined set of features delivered within a specified time frame, ensuring punctual delivery and cost efficiency.</p>
+              </li>
+              <li class="coloboration__detail">
+                <span>Time & Materials</span>
+                <p>Pay exclusively for development, design, or consulting time. Ideal for short-term projects without precise specifications or consultation purposes.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="visionair">
+        <div class="container">
+          <div class="visionair__top">
+            <h2 class="visionair__title">Empowering Industry Visionaries</h2>
+
+            <p class="visionair__descr">We take pride in our collaborations with trailblazing companies across diverse sectors. These partnerships spotlight our dedication to crafting exceptional solutions and redefining the realm of possibility.</p>
+          </div>
+
+          <div class="visionair__details">
+            <div class="visionair__info">
+              <div class="visionair__name subtitle">Viktor Ihnatiuk </div>
+              <span class="visionair__position">Founder & CEO</span>
+              <p class="visionair__text">Serial entrepreneur and highly skilled product manager. He exited from his first fintech venture when he was just 21. Later hired as an executive director and a product manager in 2 out of the 4 first decentralized cloud storages in the world. He also launched 2 more fintech startups that successfully raised an investment and are currently in the growth stage. </p>
+            </div>
+
+            <div class="visionair__image">
+              <picture>
+                <source type='image/webp' srcset='img/victor.webp'>
+                <img width='373' height='443' src='img/victor.png' alt='Viktor Ihnatiuk '>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedbacks">
+        <div class="container">
+          <div class="feedbacks__top">
+            <h2 class="feedbacks__title">Client Accolades</h2>
+
+            <div class="controls">
+              <div class="feedback-prev controls__btn controls__btn--prev">
+                <svg width='22' height='22'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </div>
+              <div class="feedback-next controls__btn">
+                <svg width='22' height='22'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feedbacks__slider swiper-container">
+          <div class="feedbacks__slider-wrapper swiper-wrapper">
+            <div class="feedbacks__slide swiper-slide">
+              <div class="feedback">
+                <div class="feedback__text">
+                  We've been working with Boosty providing a remote contractor and it's been great. Outstaffing with them helped us fill a gap in our team in a professional manner with a responsive turnaround time, even with our team travelling and tight release timelines. Our remote contractor Alex is reliable, efficient and fully dedicated, and Boosty's management is always ready to help with any additional projects we have or with anything we need. Alex is a valuable member of our team and we plan to keep working with Boosty!
+                </div>
+
+                <div class="feedback__author">
+                  <div class="feedback__author-image">
+                    <picture>
+                      <source type='image/webp' srcset='img/feedbacks/bogdan.webp'>
+                      <img width='64' height='64' src='img/feedbacks/bogdan.png' alt='Bogdan Ropotilov'>
+                    </picture>
+                  </div>
+
+                  <div class="feedback__author-name">Bogdan Ropotilov</div>
+
+                  <div class="feedback__author-position">CEO, Owner at Service-Agromarket LLC </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedbacks__slide swiper-slide">
+              <div class="feedback">
+                <div class="feedback__text">
+                  We've been working with Boosty providing a remote contractor and it's been great. Outstaffing with them helped us fill a gap in our team in a professional manner with a responsive turnaround time, even with our team travelling and tight release timelines. Our remote contractor Alex is reliable, efficient and fully dedicated, and Boosty's management is always ready to help with any additional projects we have or with anything we need. Alex is a valuable member of our team and we plan to keep working with Boosty!
+                </div>
+
+                <div class="feedback__author">
+                  <div class="feedback__author-image">
+                    <picture>
+                      <source type='image/webp' srcset='img/feedbacks/amanda.webp'>
+                      <img width='64' height='64' src='img/feedbacks/amanda.png' alt='Amanda Ferguson'>
+                    </picture>
+                  </div>
+
+                  <div class="feedback__author-name">Amanda Ferguson</div>
+
+                  <div class="feedback__author-position">CEO, Owner at Service-Agromarket LLC </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedbacks__slide swiper-slide">
+              <div class="feedback">
+                <div class="feedback__text">
+                  We've been working with Boosty providing a remote contractor and it's been great. Outstaffing with them helped us fill a gap in our team in a professional manner with a responsive turnaround time, even with our team travelling and tight release timelines. Our remote contractor Alex is reliable, efficient and fully dedicated, and Boosty's management is always ready to help with any additional projects we have or with anything we need. Alex is a valuable member of our team and we plan to keep working with Boosty!
+                </div>
+
+                <div class="feedback__author">
+                  <div class="feedback__author-image">
+                    <picture>
+                      <source type='image/webp' srcset='img/feedbacks/bogdan.webp'>
+                      <img width='64' height='64' src='img/feedbacks/bogdan.png' alt='Bogdan Ropotilov'>
+                    </picture>
+                  </div>
+
+                  <div class="feedback__author-name">Bogdan Ropotilov</div>
+
+                  <div class="feedback__author-position">CEO, Owner at Service-Agromarket LLC </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedbacks__slide swiper-slide">
+              <div class="feedback">
+                <div class="feedback__text">
+                  We've been working with Boosty providing a remote contractor and it's been great. Outstaffing with them helped us fill a gap in our team in a professional manner with a responsive turnaround time, even with our team travelling and tight release timelines. Our remote contractor Alex is reliable, efficient and fully dedicated, and Boosty's management is always ready to help with any additional projects we have or with anything we need. Alex is a valuable member of our team and we plan to keep working with Boosty!
+                </div>
+
+                <div class="feedback__author">
+                  <div class="feedback__author-image">
+                    <picture>
+                      <source type='image/webp' srcset='img/feedbacks/amanda.webp'>
+                      <img width='64' height='64' src='img/feedbacks/amanda.png' alt='Amanda Ferguson'>
+                    </picture>
+                  </div>
+
+                  <div class="feedback__author-name">Amanda Ferguson</div>
+
+                  <div class="feedback__author-position">CEO, Owner at Service-Agromarket LLC </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="awards">
+        <div class="container">
+          <div class="awards__wrapp">
+            <div class="awards__top">
+              <h2 class="awards__title">Awards and Partners</h2>
+
+              <div class="controls">
+                <div class="awards-prev controls__btn controls__btn--prev">
+                  <svg width='22' height='22'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </div>
+                <div class="awards-next controls__btn">
+                  <svg width='22' height='22'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="awards__slider swiper-container">
+              <div class="awards__slider-wrapper swiper-wrapper">
+                <div class="awards__slide swiper-slide">
+                  <div class="award">
+                    <div class="award__image">
+                      <picture>
+                        <img width='234' height='32' src='img/partners/seedstars.svg' alt='Seedstars award winner 2018'>
+                      </picture>
+                    </div>
+
+                    <div class="award__title">Seedstars award winner 2018</div>
+                  </div>
+                </div>
+                <div class="awards__slide swiper-slide">
+                  <div class="award">
+                    <div class="award__image">
+                      <picture>
+                        <img width='123' height='123' src='img/partners/design.svg' alt='Site design winner 2019'>
+                      </picture>
+                    </div>
+
+                    <div class="award__title">Site design winner 2019</div>
+                  </div>
+                </div>
+                <div class="awards__slide swiper-slide">
+                  <div class="award">
+                    <div class="award__image">
+                      <picture>
+                        <img width='163' height='77' src='img/partners/nova.png' alt='Investor in Creditor.AI'>
+                      </picture>
+                    </div>
+
+                    <div class="award__title">Investor in Creditor.AI</div>
+                  </div>
+                </div>
+                <div class="awards__slide swiper-slide">
+                  <div class="award">
+                    <div class="award__image">
+                      <picture>
+                        <img width='213' height='82' src='img/partners/forbes.svg' alt='Forbes - Best Kazakh Fintech Startup - Taplend'>
+                      </picture>
+                    </div>
+
+                    <div class="award__title">Forbes - Best Kazakh <br> Fintech Startup - Taplend</div>
+                  </div>
+                </div>
+                <div class="awards__slide swiper-slide">
+                  <div class="award">
+                    <div class="award__image">
+                      <picture>
+                        <img width='234' height='32' src='img/partners/seedstars.svg' alt='Seedstars award winner 2018'>
+                      </picture>
+                    </div>
+
+                    <div class="award__title">Seedstars award winner 2018</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner">
+        <div class="container">
+          <div class="banner__wrapp">
+            <div class="banner__info">
+              <svg width='126' height='24'>
+                <use href='img/sprite/sprite.svg#banner-logo'></use>
+              </svg>
+
+              <h2 class="banner__info-text">Boosty Venture Studio – <br> We Build Lightning Companies</h2>
+
+              <a class="banner__btn btn" href="#">
+                <p>Visit website</p>
+
+                <span class="icon">
+                  <svg width='28' height='28'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="banner__image">
+              <svg width='394' height='290'>
+                <use href='img/sprite/sprite.svg#banner-image'></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="boosty__form">
+        <div class="container content__fixed">
+          <div class="form__cover">
+            <div class="form__text">
+              <div class="boosty__title">
+                <h2>Connect with Us</h2>
+              </div>
+              <div class="form__line"></div>
+              <p>Eager to unleash your growth potential with Boosty Labs? Connect with our team to learn more about our
+                services and how we can help you realize your ambitions.</p>
+              <a href="#" class="call__element">
+                <span>Book a call</span>
+              </a>
+            </div>
+            <div class="contact__form">
+              <form action="#">
+                <div class="text-input">
+                  <input type="email" name="mail" id="email" placeholder=" " required>
+                  <label for="email">Your email</label>
+                </div>
+                <div class="text-input">
+                  <input type="text" name="name" id="name" placeholder=" " required>
+                  <label for="name">Your full name</label>
+                </div>
+                <div class="text-input">
+                  <input type="text" name="company" id="company" placeholder=" " required>
+                  <label for="company">Company / organization</label>
+                </div>
+                <div class="text-input choice">
+                  <span>What type of cooperation you are looking for?</span>
+                  <section class="status">
+                    <input type="checkbox" id="status1" class="status_input" />
+                    <div class="current_status-cover">
+                      <div class="current_status">
+                        <p class="status_message one">Need developers</p>
+                        <span class="expand">
+                          <label for="status1">
+                            <span class="material-symbols-outlined"> <img src="images/arrof__form.svg"
+                                alt="images>"></span>
+                          </label>
+                        </span>
+                      </div>
+                      <ul class="other">
+                        <li class="other_card">
+                          <p class="status_message one">Idle</p>
+                        </li>
+                        <li class="other_card">
+                          <p class="status_message one">Do not disturb</p>
+                        </li>
+                        <li class="other_card">
+                          <p class="status_message one">Invisible</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+                <div class="text-input">
+                  <input type="text" name="detaily" id="detaily" placeholder=" ">
+                  <label for="detaily">Describe your request more detaily</label>
+                </div>
+                <div class="text-input choice">
+                  <span>How would you like us to contact you?</span>
+                  <section class="status">
+                    <input type="checkbox" id="status2" class="status_input" />
+                    <div class="current_status-cover">
+                      <div class="current_status">
+                        <p class="status_message two">Email</p>
+                        <span class="expand">
+                          <label for="status2">
+                            <span class="material-symbols-outlined"> <img src="images/arrof__form.svg"
+                                alt="images>"></span>
+                          </label>
+                        </span>
+                      </div>
+                      <ul class="other">
+                        <li class="other_card">
+                          <p class="status_message two">Option 1</p>
+                        </li>
+                        <li class="other_card">
+                          <p class="status_message two">Option 2</p>
+                        </li>
+                        <li class="other_card">
+                          <p class="status_message two">Option 3</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+                <div class="contact-form-controls">
+                  <label for="contactsAttach" class="contact-form-controls-attach-btn"></label>
+                  <input type="file" name="" id="contactsAttach" class="contact-form-controls-attach">
+                  <div class="form__btn">
+                    <button><span>Send</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="presense">
+        <div class="container">
+          <div class="presense__wrapp">
+            <h2 class="presense__title">Our Global Presence</h2>
+
+            <ul class="presense__places">
+              <li class="presense__place">
+                <div class="presense__place-bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/presense/new-york.webp'>
+                    <img width='380' height='207' src='img/presense/new-york.png' alt='Marburg, Germany'>
+                  </picture>
+                </div>
+
+                <div class="presense__place-info">
+                  <div class="presense__place-name heading"><span>Marburg,</span> Germany</div>
+                  <p class="presense__place-index">Kirchspitze, 35037</p>
+                </div>
+
+                <a class="presense__place-link" href="mailto:interact@boostylabs.com">
+                  <span>
+                    <svg width='22' height='22'>
+                      <use href='img/sprite/sprite.svg#mail'></use>
+                    </svg>
+                  </span>
+
+                  <p>interact@boostylabs.com</p>
+                </a>
+              </li>
+              <li class="presense__place">
+                <div class="presense__place-bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/presense/new-york.webp'>
+                    <img width='380' height='207' src='img/presense/new-york.png' alt='New York, United States'>
+                  </picture>
+                </div>
+
+                <div class="presense__place-info">
+                  <div class="presense__place-name heading"><span>New York,</span> United States</div>
+                  <p class="presense__place-index">220 East 23rd Street, Office <br> #500, NY 10010</p>
+                </div>
+
+                <a class="presense__place-link" href="mailto:salesny@boostylabs.com">
+                  <span>
+                    <svg width='22' height='22'>
+                      <use href='img/sprite/sprite.svg#mail'></use>
+                    </svg>
+                  </span>
+
+                  <p>SalesNY@boostylabs.com</p>
+                </a>
+              </li>
+              <li class="presense__place">
+                <div class="presense__place-bg">
+                  <picture>
+                    <source type='image/webp' srcset='img/presense/new-york.webp'>
+                    <img width='380' height='207' src='img/presense/new-york.png' alt='London, Great Britain'>
+                  </picture>
+                </div>
+
+                <div class="presense__place-info">
+                  <div class="presense__place-name heading"><span>London,</span> Great Britain</div>
+                  <p class="presense__place-index">86/90 Paul street, EC2A4NE</p>
+                </div>
+
+                <a class="presense__place-link" href="mailto:f.nazari@boostylabs.com">
+                  <span>
+                    <svg width='22' height='22'>
+                      <use href='img/sprite/sprite.svg#mail'></use>
+                    </svg>
+                  </span>
+
+                  <p>f.nazari@boostylabs.com</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html',{})
+    <!-- @include('partials/modals.html',{}) -->
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
+
+

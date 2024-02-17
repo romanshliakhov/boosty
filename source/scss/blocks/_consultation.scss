@@ -1,0 +1,58 @@
+.consultation {
+  margin-bottom: 100px;
+
+  &__wrapp {
+    background-color: var(--color-green-light);
+    border-radius: 24px;
+    padding: 60px 80px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: var(--color-main-bg);
+  }
+
+  &__descr {
+    display: block;
+    margin-bottom: 40px;
+    max-width: 420px;
+    color: var(--color-main-bg);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+  &__btn {
+    padding: 4px 4px 4px 24px;
+    background-color: #0e0c16;
+    border-radius: 100px;
+
+    span {
+      width: 56px;
+      height: 56px;
+      background-color: var(--color-green-light);
+
+      svg {
+        fill: var(--color-main-bg);
+      }
+    }
+  }
+
+  &__more {
+    padding: 24px;
+    outline: 1px solid #0e0c16;
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 500;
+    color: var(--color-main-bg);
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-link-hover);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.recent {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  grid-gap: 20px;
+  padding: 20px 40px 20px 20px;
+  border: 1px solid rgba(251, 248, 243, 0.2);
+  border-radius: 16px;
+  background-color: #1b1922;
+  transition: all 0.4s ease;
+
+  &__image {
+    display: flex;
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+    transition: all 0.4s ease;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-main-bg);
+  }
+}

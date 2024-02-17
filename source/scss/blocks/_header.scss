@@ -1,0 +1,35 @@
+header {
+  width: 100%;
+  // position: fixed;
+  padding: 20px 0;
+  background-color: var(--color-main);
+  z-index: 20;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    grid-gap: 40px;
+
+    a {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--color-link-hover);
+      }
+    }
+  }
+
+  &__btn {
+    grid-gap: 12px;
+  }
+
+}
+
+
+

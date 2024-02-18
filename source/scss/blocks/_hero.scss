@@ -1,5 +1,31 @@
 .hero {
+  position: relative;
   padding: 150px 0 40px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: var(--main-gradient);
+    background-repeat: no-repeat;
+    width: 1291px;
+    height: 791px;
+    width: 1111px;
+    height: 1056px;
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: var(--boosty-icon);
+    background-repeat: no-repeat;
+    width: 764px;
+    height: 490px;
+    top: 0;
+    right: 142px;
+  }
 
   &__title {
     margin-bottom: 30px;

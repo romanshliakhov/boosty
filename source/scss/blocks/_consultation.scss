@@ -2,9 +2,20 @@
   margin-bottom: 100px;
 
   &__wrapp {
+    position: relative;
     background-color: var(--color-green-light);
     border-radius: 24px;
     padding: 60px 80px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: var(--boosty-icon-v2);
+      width: 496px;
+      height: 329px;
+      right: 0;
+      bottom: 0;
+    }
   }
 
   &__title {

@@ -29,7 +29,10 @@ let reasonsSlider = new Swiper('.reasons__slider', {
 
 // Feedbacks
 let feedbacksSlider = new Swiper('.feedbacks__slider', {
-  slidesPerView: 2,
+  slidesPerView: 1,
+  // slidesPerView: 'auto',
+  // centeredSlides: true,
+  roundLengths: true,
   spaceBetween: 20,
   observer: true,
   observeParents: true,
@@ -38,6 +41,19 @@ let feedbacksSlider = new Swiper('.feedbacks__slider', {
     nextEl: ".feedback-next",
     prevEl: ".feedback-prev",
     clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.23,
+    },
+    1024: {
+      slidesPerView: 1.25,
+      centeredSlides: true,
+    },
+    1240: {
+      slidesPerView: 1.73,
+      centeredSlides: true,
+    },
   },
 });
 

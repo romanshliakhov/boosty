@@ -1,16 +1,23 @@
 footer {
   position: relative;
-  padding: 40px 0 50px;
+  padding: clamp(30px, 2.778vw, 40px) 0 clamp(40px, 3.472vw, 50px);
   background-color: var(--color-main);
   z-index: 5;
 }
 
 .footer {
   &__top {
-    padding-bottom: 30px;
+    padding-bottom: clamp(20px, 2.083vw, 30px);
     display: grid;
     grid-template-columns: 1fr 170px;
-    grid-gap: 38px;
+    grid-gap: 20px 38px;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
 
     &-info {
       display: flex;
@@ -28,6 +35,12 @@ footer {
 
     &-contacts {
       grid-row: span 2;
+
+      @media (max-width: 1024px) {
+        display: flex;
+        align-items: flex-start;
+        grid-gap: 50px;
+      }
     }
   }
 
@@ -65,7 +78,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    grid-gap: 20px;
+    grid-gap: clamp(10px, 1.389vw, 20px);
   }
 
   &__phone {
@@ -152,12 +165,16 @@ footer {
   }
 
   &__features {
-    padding: 30px 0;
+    padding: clamp(20px, 2.083vw, 30px) 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 46px;
+    grid-gap: 20px 46px;
     border-top: 1px solid var(--color-primary);
     border-bottom: 1px solid var(--color-primary);
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__feature {
@@ -192,7 +209,7 @@ footer {
   }
 
   &__supports {
-    padding: 30px 0 50px;
+    padding: clamp(20px, 2.083vw, 30px) 0 clamp(40px, 3.472vw, 50px);
     display: flex;
     flex-direction: column;
     grid-gap: 14px;
@@ -226,13 +243,18 @@ footer {
     color: rgba(251, 248, 243, 0.5);
 
     h2 {
-      margin-bottom: 38px;
+      margin-bottom: clamp(30px, 2.639vw, 38px);
     }
 
     &-block {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 60px;
+      grid-gap: clamp(20px, 4.167vw, 60px);
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+      }
     }
 
     &-text {

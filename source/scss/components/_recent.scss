@@ -1,13 +1,17 @@
 .recent {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: clamp(160px, 13.889vw, 200px) 1fr;
   align-items: center;
   grid-gap: 20px;
-  padding: 20px 40px 20px 20px;
+  padding: 20px clamp(20px, 2.778vw, 40px) 20px 20px;
   border: 1px solid rgba(251, 248, 243, 0.2);
   border-radius: 16px;
   background-color: #1b1922;
   transition: all 0.4s ease;
+
+  @media (max-width: 1024px) {
+    padding: 20px;
+  }
 
   &__image {
     display: flex;

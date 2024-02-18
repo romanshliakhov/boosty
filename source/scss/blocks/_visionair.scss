@@ -1,5 +1,19 @@
 .visionair {
   margin-bottom: 100px;
+  position: relative;
+  // overflow-x: hidden;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   background-image: var(--main-gradient-v2);
+  //   width: 1219px;
+  //   height: 1179px;
+  //   bottom: 20%;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   z-index: -1;
+  // }
 
   &__wrapp {
     display: flex;
@@ -23,12 +37,23 @@
   }
 
   &__details {
-    padding-left: 80px;
+    position: relative;
+    padding-left: clamp(60px, 5.556vw, 80px);
     background-color: rgba(251, 248, 243, 0.1);
     border-radius: 24px;
     display: flex;
     justify-content: space-between;
-    grid-gap: 30px;
+    // grid-gap: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: var(--bosty-icon-v3);
+      width: 535px;
+      height: 445px;
+      top: 0;
+      right: 0;
+    }
   }
 
   &__info {

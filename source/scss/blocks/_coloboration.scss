@@ -1,7 +1,8 @@
 .coloboration {
+  position: relative;
   margin-bottom: 100px;
   background-color: var(--color-green-light);
-  border-radius: 30px;position: relative;
+  border-radius: 30px;
 
   &__wrapp {
     display: grid;

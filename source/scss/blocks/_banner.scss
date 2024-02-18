@@ -6,10 +6,16 @@
     display: grid;
     grid-template-columns: 545px 1fr;
     align-items: center;
-    grid-gap: 60px;
+    grid-gap: clamp(10px, 31.944vw, 60px);
     backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 24px;
+
+    @media (max-width: 1024px) {
+      padding: 60px;
+      padding-right: 0;
+      grid-gap: 0;
+    }
   }
 
   &__info {
@@ -20,6 +26,18 @@
 
   &__image {
     display: flex;
+
+    svg {
+      width: 394px;
+      width: clamp(300px, 27.361vw, 394px);
+      height: 290px;
+      height: clamp(220px, 20.139vw, 290px);
+    }
+
+    @media (max-width: 1024px) {
+      justify-content: center;
+
+    }
   }
 
   &__btn {

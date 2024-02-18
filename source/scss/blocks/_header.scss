@@ -11,6 +11,11 @@ header {
   align-items: center;
   justify-content: space-between;
 
+  &__logo {
+    position: relative;
+    z-index: 20;
+  }
+
   &__menu {
     display: flex;
     align-items: center;
@@ -24,10 +29,29 @@ header {
         color: var(--color-link-hover);
       }
     }
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      display: none;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
   }
 
   &__btn {
+    position: relative;
     grid-gap: 12px;
+    z-index: 20;
+
+    @media (max-width: 992px) {
+      p {
+        display: none;
+      }
+    }
   }
 
 }

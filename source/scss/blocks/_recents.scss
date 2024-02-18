@@ -1,5 +1,5 @@
 .recents {
-  margin-bottom: 100px;
+  margin-bottom: clamp(80px, 9.766vw, 100px);
 
   &__wrapp {
     display: flex;
@@ -15,5 +15,9 @@
 
   &__slider {
     width: 100%;
+  }
+
+  &__slide {
+    height: auto;
   }
 }

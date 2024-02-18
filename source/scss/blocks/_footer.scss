@@ -31,6 +31,12 @@ footer {
         font-weight: 400;
         color: rgba(251, 248, 243, 0.7);
       }
+
+      @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 10px;
+      }
     }
 
     &-contacts {
@@ -39,7 +45,14 @@ footer {
       @media (max-width: 1024px) {
         display: flex;
         align-items: flex-start;
-        grid-gap: 50px;
+        flex-wrap: wrap;
+        grid-gap: 20px clamp(20px, 4.883vw, 50px);
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 10px;
+        align-items: center;
+        grid-gap: 20px 17px;
       }
     }
   }
@@ -49,6 +62,10 @@ footer {
     display: flex;
     align-items: center;
     grid-gap: 10px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 0;
+    }
 
     a {
       display: flex;
@@ -79,6 +96,10 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     grid-gap: clamp(10px, 1.389vw, 20px);
+
+    @media (max-width: 576px) {
+      display: contents;
+    }
   }
 
   &__phone {
@@ -115,7 +136,13 @@ footer {
   &__top-nav {
     display: flex;
     align-items: flex-start;
-    grid-gap: 72px;
+    grid-gap: clamp(30px, 7.031vw, 72px);
+
+    @media (max-width: 992px) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__nav {
@@ -217,12 +244,18 @@ footer {
     &-lists {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-gap: 98px;
+      grid-gap: clamp(77px, 9.57vw, 98px);
 
       ul {
         display: flex;
         flex-direction: column;
         grid-gap: 5px;
+
+        // @media (max-width: 1024px) {
+        //   display: flex;
+        //   align-items: flex-start;
+        //   justify-content: space-between;
+        // }
 
         a {
           font-size: 13px;
@@ -235,6 +268,15 @@ footer {
             color: var(--color-white);
           }
         }
+      }
+
+      @media (max-width: 1023px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+      }
+
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }

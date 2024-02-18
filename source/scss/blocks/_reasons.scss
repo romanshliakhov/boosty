@@ -1,5 +1,5 @@
 .reasons {
-  margin-bottom: 100px;
+  margin-bottom: clamp(80px, 9.766vw, 100px);
 
   &__top {
     display: flex;
@@ -15,7 +15,7 @@
     @media (max-width: 1024px) {
       width: 100%;
       margin-left: 0;
-      padding: 0 40px;
+      padding: 0 clamp(20px, 3.906vw, 40px);
     }
   }
 

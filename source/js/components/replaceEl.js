@@ -4,18 +4,14 @@ let replaceSettings = {
   beforeend: 'beforeend', //  внутри элемента targetElement, после его последнего потомка
   afterend: 'afterend', // после самого элемента targetElement
   mobile: 576,
-  smallTablet: 750,
+  smallTablet: 768,
   tablet: 942
 }
 
 let elementName = {
-  headerNav: '.header__nav',
-  headerNavParent: '.header__logo',
+  headerNav: '.header__menu',
+  headerNavParent: '.header__controls',
   headerNavMobile: '.mobile__menu',
-
-  headerLogin: '.header__login',
-  headerLoginParent: '.header__nav',
-  headerLoginMobile: '.mobile__menu',
 }
 
 let items = [...document.querySelectorAll('.wrapper')];
@@ -39,11 +35,9 @@ const replaceElements = (elements, elementClass, desktopClass, mobileClass, mobi
 }
 
 window.addEventListener('resize', () => {
-  replaceElements(items, elementName.headerNav, elementName.headerNavParent, elementName.headerNavMobile, replaceSettings.afterbegin, replaceSettings.afterend,  replaceSettings.smallTablet);
-  replaceElements(items, elementName.headerLogin, elementName.headerLoginParent, elementName.headerLoginMobile, replaceSettings.beforeend, replaceSettings.afterend,  replaceSettings.smallTablet);
+  replaceElements(items, elementName.headerNav, elementName.headerNavParent, elementName.headerNavMobile, replaceSettings.afterbegin, replaceSettings.beforebegin,  replaceSettings.smallTablet);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  replaceElements(items, elementName.headerNav, elementName.headerNavParent, elementName.headerNavMobile, replaceSettings.afterbegin, replaceSettings.afterend,  replaceSettings.smallTablet);
-  replaceElements(items, elementName.headerLogin, elementName.headerLoginParent, elementName.headerLoginMobile, replaceSettings.beforeend, replaceSettings.afterend,  replaceSettings.smallTablet);
+  replaceElements(items, elementName.headerNav, elementName.headerNavParent, elementName.headerNavMobile, replaceSettings.afterbegin, replaceSettings.beforebegin,  replaceSettings.smallTablet);
 });

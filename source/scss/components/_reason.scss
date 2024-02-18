@@ -1,6 +1,6 @@
 .reason {
   height: 100%;
-  padding: 30px 40px 40px;
+  padding: 30px clamp(30px, 3.906vw, 40px) clamp(30px, 3.906vw, 40px);
   border: 1px solid rgba(251, 248, 243, 0.2);
   border-radius: 16px;
   display: flex;
@@ -12,10 +12,14 @@
   }
 
   &__title {
-    font-size: 20px;
+    font-size: clamp(18px, 1.953vw, 20px);
     line-height: 120%;
     font-weight: 500;
     letter-spacing: -0.02em;
     color: var(--color-white);
+  }
+
+  &__descr {
+    color: rgba(251, 248, 243, 0.7);
   }
 }

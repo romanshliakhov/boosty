@@ -1,5 +1,5 @@
 .feedbacks {
-  margin-bottom: 100px;
+  margin-bottom: clamp(80px, 9.766vw, 100px);
 
   &__top {
     display: flex;
@@ -10,10 +10,17 @@
   &__slider {
     margin-top: 40px;
     width: 100%;
+    padding-left: 20px;
+    // margin: 40px -20px 0;
+    // padding: 0 20px;
   }
 
   &__slide {
     max-width: 800px;
     height: auto;
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
   }
 }

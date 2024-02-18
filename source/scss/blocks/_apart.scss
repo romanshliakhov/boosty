@@ -1,7 +1,7 @@
 .apart {
   background-color: var(--color-green-light);
   border-radius: 30px;
-  padding: 80px 0 173px;
+  padding: 80px 0 clamp(145px, 16.895vw, 173px);
 
   &__title {
     margin-bottom: 30px;
@@ -9,7 +9,7 @@
   }
 
   &__descr {
-    margin-bottom: 40px;
+    margin-bottom: clamp(30px, 3.906vw, 40px);
     max-width: 475px;
     color: var(--color-main-bg);
 
@@ -19,11 +19,17 @@
   }
 
   &__info {
-    margin-bottom: 50px;
+    margin-bottom: clamp(40px, 4.883vw, 50px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--color-main-bg);
+
+    @media (max-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px 0;
+    }
 
     li {
       display: flex;

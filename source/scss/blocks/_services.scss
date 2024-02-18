@@ -1,18 +1,22 @@
 .services {
-  margin-top: -100px;
-  margin-bottom: 100px;
+  margin-top: clamp(-65px, -9.766vw, -100px);
+  margin-bottom: clamp(80px, 9.766vw, 100px);
   background: linear-gradient(180deg, #1b1922 0%, #0e0c16 100%);
   border-radius: 30px;
 
+  // @media (max-width: 576px) {
+  //   margin-top: -65px;
+  // }
+
   &__wrapp {
-    padding-top: 100px;
+    padding-top: clamp(80px, 9.766vw, 100px);
   }
 
   &__tabs {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    grid-gap: 40px;
+    grid-gap: clamp(30px, 3.906vw, 40px);
   }
 
   &__tabcontent {
@@ -25,13 +29,17 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 
+    @media (max-width: 576px) {
+      grid-template-columns: 100%;
+    }
+
     &-item {
       padding: 17px 0;
-      // border: 1px solid var(--color-green-light);
-      outline: 1px solid var(--color-green-light);
+      border: 1px solid var(--color-green-light);
+      // outline: 1px solid var(--color-green-light);
       border-radius: 100px;
       backdrop-filter: blur(50px);
-      font-size: 20px;
+      font-size: clamp(18px, 1.953vw, 20px);
       line-height: 150%;
       font-weight: 500;
       letter-spacing: -0.02em;
@@ -68,16 +76,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__detail {
-    padding: 35px;
+    padding: clamp(30px, 3.418vw, 35px);
     border-radius: 16px;
     backdrop-filter: blur(50px);
     background-color: rgba(217, 217, 217, 0.05);
     display: grid;
     grid-template-columns: 60px 1fr;
-    grid-gap: 30px;
+    grid-gap: clamp(20px, 2.93vw, 30px);
+
+    @media (max-width: 992px) {
+      grid-template-columns: 100%;
+    }
 
     &-icon {
       display: flex;
@@ -85,7 +101,7 @@
 
     &-heading {
       margin-bottom: 20px;
-      font-size: 20px;
+      font-size: clamp(18px, 1.953vw, 20px);
       line-height: 150%;
       font-weight: 500;
       letter-spacing: -0.02em;
@@ -94,7 +110,7 @@
 
     &-text {
       display: block;
-      margin-bottom: 40px;
+      margin-bottom: clamp(30px, 3.906vw, 40px);
       color: rgba(251, 248, 243, 0.7);
     }
 

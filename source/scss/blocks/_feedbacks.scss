@@ -7,12 +7,30 @@
     justify-content: space-between;
   }
 
+  &__controls {
+    .controls__btn {
+      background-color: transparent;
+      border: 1px solid #424046;
+
+      svg {
+        fill: var(--color-white);
+      }
+
+      &:hover {
+        background-color: var(--color-green);
+        border: 1px solid transparent;
+
+        svg {
+          fill: #0e0e11;
+        }
+      }
+    }
+  }
+
   &__slider {
     margin-top: 40px;
     width: 100%;
     padding-left: 20px;
-    // margin: 40px -20px 0;
-    // padding: 0 20px;
   }
 
   &__slide {

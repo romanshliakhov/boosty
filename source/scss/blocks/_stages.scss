@@ -1,0 +1,34 @@
+.stages {
+  margin-bottom: 80px;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__title {
+    max-width: 680px;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 10px;
+  }
+
+  &__detail {
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(80px);
+    // background: linear-gradient(180deg, #BCFB9F 0%, #0e0c16 100%);
+    border: 1px solid var(--color-green);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+
+    span {
+      color: var(--color-green);
+    }
+  }
+}

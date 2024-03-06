@@ -74,17 +74,16 @@ let awardsSlider = new Swiper('.awards__slider', {
   },
   breakpoints: {
     320: {
-      // slidesPerView: 2,
-      // slidesPerColumn: 2,
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      // centeredSlides: true,
       // slidesPerGroup: 4,
       // autoHeight: false,
       // watchOverflow: true,
       // grid: {
       //   rows: 2,
       // },
-
-      slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     768: {
       slidesPerView: 4,

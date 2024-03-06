@@ -1,0 +1,42 @@
+.development {
+  margin-bottom: clamp(80px, 9.766vw, 100px);
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__title {
+    max-width: 576px;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__detail {
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(50px);
+    background: rgba(217, 217, 217, 0.05);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    line-height: 160%;
+    color: rgba(251, 248, 243, 0.7);
+
+    span {
+      display: block;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(251, 248, 243, 0.3);
+      font-size: 20px;
+      line-height: 150%;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--color-green);
+    }
+  }
+}

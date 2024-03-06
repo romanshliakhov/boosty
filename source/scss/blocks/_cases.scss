@@ -1,0 +1,15 @@
+.cases {
+  margin-bottom: clamp(80px, 9.766vw, 100px);
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

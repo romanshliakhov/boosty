@@ -1,115 +1,99 @@
-/* contact__form */
-.boosty__form {
-	position: relative;
-	overflow: hidden;
-	padding-top: 95px;
-	padding-bottom: 85px;
-}
-	.boosty__form:before {
+.connect {
+  position: relative;
+  margin-bottom: clamp(80px, 9.766vw, 100px);
+
+  &::before {
     content: '';
-    display: block;
     position: absolute;
+    background-image: var(--form-bg-icon);
+    // background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: url(../images/bg__gg.svg) no-repeat right center;
-    right: 0;
-		z-index: -1;
-		top: -10px;
-}
-.form__cover{
-	display: flex;
-}
-.form__text {
-	width: 50%;
-	background: url(../images/bg-connect-content.svg) no-repeat left/350px;
-}
-	.form__text p{
-    padding: 25px 0 50px;
-    font-family: var(--font-inter-regular);
-    font-size: 16px;
-    line-height: 25px;
-    color: rgba(251, 248, 243, 0.7);
-    width: 70%;
-	}
-.form__line {
-	height: 1px;
-	background: #FBF8F34D;
-	position: relative;
-}
-	.form__line:before {
-    content: '';
+  }
+
+  &__wrapp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 992px) {
+      grid-template-columns: 100%;
+      grid-gap: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__divider {
+    margin-bottom: 30px;
+    height: 1px;
+    background: var(--color-primary);
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-green);
+      right: -3px;
+      top: -3px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__descr {
     display: block;
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #BCFB9F;
-    right: -3px;
-    top: -2px;
+    margin-bottom: 40px;
+    max-width: 425px;
+  }
+
+  &__btn {
+    color: var(--color-green);
+
+    span {
+      width: 80px;
+      height: 80px;
+      background-color: var(--color-green);
+
+      svg {
+        fill: var(--color-main-bg);
+      }
+    }
+  }
+
+  &__form {
+    padding: clamp(40px, 5.859vw, 60px) clamp(20px, 5.859vw, 60px);
+    backdrop-filter: blur(80px);
+    background-color: rgba(38, 36, 47, 0.3);
+    border-radius: 16px;
+  }
+
+
 }
-.call__element {
-	display: inline-block;
-	font-size: 0;
-	text-decoration: none;
-	line-height: 65px;
-	font-size: 0;
-	padding: 0 80px 0 0;
-	color: #BCFB9F;
-	position: relative;
-	transition: color 0.3s ease;
-}
-	.call__element span{
-	background: none;
-	border: 0;
-	color: #BCFB9F;
-	cursor: pointer;
-	font-size: 16px;
-	}
-			.call__element span:hover {
-			color: #ffff;
-			}
-				.call__element:after {
-						content: '';
-						display: block;
-						position: absolute;
-						right: 0;
-						top: 0;
-						width: 60px;
-						height: 60px;
-						border-radius: 50%;
-						background: #BCFB9F url(../images/icon-phone.svg) no-repeat center center;
-						transition: background-color 0.3s ease, transform 0.3s ease;
-				}
-					.call__element:hover:after {
-			transform: translateX(4px);
-			background-color: #fff;
-			}
-.contact__form {
-	width: 50%;
-	z-index: 3;
-}
-.form__content {
-		border-radius: 24px;
-    box-sizing: border-box;
-    padding: 40px 100px 80px;
-    background-color: #26242F4D;
-}
-form{
-	border-radius: 24px;
-	box-sizing: border-box;
-	padding: 49px 60px 80px;
-	background-color: #26242F4D;
-}
+
+
+
+/* contact__form */
 .text-input.choice{
 	flex-flow: column;
 	padding-bottom: 15px;
 }
-	.text-input.choice span{
-		color: #FBF8F380;
-		font-size: 14px;
-		font-family: var(--font-twk-everet-regular);
-		padding: 20px 2px 15px 0;
-	}
+.text-input.choice span{
+  color: #FBF8F380;
+  font-size: 14px;
+  font-family: var(--font-twk-everet-regular);
+  padding: 20px 2px 15px 0;
+}
 #selectbox,#selectbox1{
 	border: 0;
 	background: none;
@@ -122,17 +106,17 @@ form{
 	padding-bottom: 10px;
 	line-height: 50px;
 }
-	#selectbox option,#selectbox1 option{
-    background: #000001;
-    color: #FBF8F380;
-		outline: none;
-		line-height: 50px;
-	}
+#selectbox option,#selectbox1 option{
+  background: #000001;
+  color: #FBF8F380;
+  outline: none;
+  line-height: 50px;
+}
 
 .text-input {
-  display: flex;
-  flex-direction: column-reverse;
-  width: 100%;
+display: flex;
+flex-direction: column-reverse;
+width: 100%;
 }
 .text-input > input {
   background: none;
@@ -145,7 +129,6 @@ form{
 	font-family: var(--font-twk-everet-regular);
 	font-size: 16px;
 }
-
 .text-input > input + label {
   transform: translateY(0);
   transition: transform .2s;
@@ -160,20 +143,20 @@ form{
 .text-input > input:focus + label {
 	transform: translateY(0);
 }
-	.text-input > input:focus {
-		color: #FBF8F3;
-		transform: translateY(0);
-		border-bottom: 1px solid #BCFB9F;
-	}
+.text-input > input:focus {
+  color: #FBF8F3;
+  transform: translateY(0);
+  border-bottom: 1px solid #BCFB9F;
+}
 
-	.contact-form-controls-attach-btn {
+.contact-form-controls-attach-btn {
     display: block;
     position: absolute;
     width: 60px;
     height: 60px;
     cursor: pointer;
     border-radius: 50%;
-    background: #1B1922 url(../images/icon-clip.svg) no-repeat center center;
+    background: #1B1922 url(../img/icon-clip.svg) no-repeat center center;
     transition: background-color 0.3s ease;
 }
 .contact-form-controls-attach {
@@ -203,15 +186,15 @@ form{
 	color: #BCFB9F;
 	transition: color 0.3s ease;
 }
-	.form__btn :hover span {
-		color: #fff;
-	}
- .contact-form-controls button:hover:after {
-		background-color: #fff;
-    transform: translateX(4px);
-	}
-	.contact-form-controls-attach-btn:hover {
-    background-color: #433d57;
+.form__btn :hover span {
+  color: #fff;
+}
+.contact-form-controls button:hover:after {
+  background-color: #fff;
+  transform: translateX(4px);
+}
+.contact-form-controls-attach-btn:hover {
+  background-color: #433d57;
 }
 .contact-form-controls button:after {
 	content: '';
@@ -222,15 +205,100 @@ form{
 	position: absolute;
 	right: 0;
 	top: 0;
-	background: #BCFB9F url(../images/icon-arrow-right-dark.svg) no-repeat center center;
+	background: #BCFB9F url(../img/icon-arrow-right-dark.svg) no-repeat center center;
 	transition: background-color 0.3s ease, transform 0.3s ease;
 }
-	.contact-form-controls button span {
-		font-size: 15px;
-		color: #BCFB9F;
-		font-family: var(--font-twk-everet-medium);
-	}
+.contact-form-controls button span {
+  font-size: 15px;
+  color: #BCFB9F;
+  font-family: var(--font-twk-everet-medium);
+}
 .form__content input:focus {
 padding-bottom: 50px;
 }
 /* contact__formEnd */
+
+/* dropdown */
+
+.status {
+	cursor: pointer;
+  position:relative;
+	width: 100%;
+	border-bottom: 1px solid #FBF8F366;
+}
+.status_input {
+	display: none;
+	appearance: none;
+}
+.current_status {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #a4a4a4;
+}
+.status_color {
+	--width: 15px;
+	width: var(--width);
+	aspect-ratio: 1;
+	border-radius: 9999px;
+	position: absolute;
+	top: calc(50% - calc(var(--width) / 2));
+	left: 30px;
+	background-color: var(--status_color);
+}
+.status_message {
+	color: #FBF8F3;
+	font-size: 16px;
+	font-family: var(--font-twk-everet-regular);
+}
+.expand * {
+	cursor: pointer;
+}
+span.material-symbols-outlined {
+	user-select: none;
+	transition: 0.4s;
+	font-size: 36px;
+}
+.status_input:checked ~ .current_status .material-symbols-outlined {
+	transform: rotate(180deg);
+}
+.material-symbols-outlined img{
+	max-width: 11px;
+}
+.other {
+	max-height: 0;
+  width:100%;
+	margin: 0;
+	overflow: hidden;
+  box-shadow:5px 5px 6px rgba(0, 0, 0, .221);
+}
+.current_status-cover.check .other {
+	max-height: 1000px;
+	margin-bottom: 1em;
+	background: #000001;
+	right: 2px;
+	position: absolute;
+	z-index: 100;
+}
+.other_card {
+	position: relative;
+	width: 100%;
+	padding: 13px;
+	background-color: #000001;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	transition: 0.2s;
+	cursor: pointer;
+}
+.other_card:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.other_card:hover {
+	filter: brightness(1.1);
+}
+
+/* dropdownEnd */

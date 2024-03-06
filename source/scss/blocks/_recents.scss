@@ -13,6 +13,26 @@
     justify-content: space-between;
   }
 
+  &__controls {
+    .controls__btn {
+      background-color: transparent;
+      border: 1px solid #424046;
+
+      svg {
+        fill: var(--color-white);
+      }
+
+      &:hover {
+        background-color: var(--color-green);
+        border: 1px solid transparent;
+
+        svg {
+          fill: #0e0e11;
+        }
+      }
+    }
+  }
+
   &__slider {
     width: 100%;
   }

@@ -39,11 +39,17 @@
   }
 
   &__slider {
-    width: 100%;
+    width: calc(100% + 20px);
+    margin: -20px -10px;
     // height: 100%;
   }
 
+  // &__slider-wrapper {
+  //   margin: -20px -10px;
+  // }
+
   &__slide {
+    padding: 20px 10px;
     // @media (max-width: 767px) {
     //   height: calc((100% - 30px) / 2) !important;
     // }

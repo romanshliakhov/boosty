@@ -1,0 +1,58 @@
+.benefits {
+  margin-bottom: clamp(80px, 9.766vw, 100px);
+  background: linear-gradient(0deg, #0e0c16 0%, #1b1922 100%);
+  border-radius: 40px;
+
+  &__wrapp {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__detail {
+    position: relative;
+    padding: 30px 40px;
+    border-radius: 16px;
+    border: 1px solid var(--color-green);
+    display: flex;
+    grid-gap: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: var(--development-item-bg);
+      background-repeat: no-repeat;
+      width: 217px;
+      height: 162px;
+      bottom: 0;
+      right: 0;
+    }
+
+    &-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+    }
+
+    &-heading {
+      max-width: 334px;
+      font-size: 20px;
+      line-height: 140%;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    &-text {
+      max-width: 402px;
+      color: rgba(251, 248, 243, 0.7);
+    }
+  }
+}

@@ -46,7 +46,7 @@ $colors: (
 }
 .swiper-container-multirow-column > .swiper-wrapper {
   flex-wrap: wrap;
-  flex-direction: column;
+  // flex-direction: column;
 }
 .swiper-container-free-mode > .swiper-wrapper {
   transition-timing-function: ease-out;

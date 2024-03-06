@@ -7,6 +7,12 @@
     justify-content: space-between;
   }
 
+  &__title {
+    @media (max-width: 576px) {
+      padding-right: 10px;
+    }
+  }
+
   &__slider {
     margin-top: 40px;
     margin-left: -80px;

@@ -116,6 +116,31 @@ let recentsSlider = new Swiper('.recents__slider', {
   },
 });
 
+// Cases Slider
+let casesSlider = new Swiper('.cases__slider', {
+  observer: true,
+  observeParents: true,
+  loop: true,
+  navigation: {
+    nextEl: ".cases-next",
+    prevEl: ".cases-prev",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2.55,
+      spaceBetween: 10,
+    },
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+});
 
 
 

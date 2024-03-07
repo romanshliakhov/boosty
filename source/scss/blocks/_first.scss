@@ -1,5 +1,5 @@
 .first {
-  margin-bottom: 80px;
+  margin-bottom: clamp(80px, 9.766vw, 100px);
   position: relative;
 
   &::before {
@@ -20,16 +20,20 @@
   }
 
   &__wrapp {
-    padding: 150px 0 40px;
+    padding: clamp(135px, 19.531vw, 150px) 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 20px;
+    grid-gap: clamp(30px, 4.395vw, 45px);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     display: flex;
-    max-width: 420px;
+    max-width: clamp(270px, 52.083vw, 400px);
     width: 100%;
     flex-shrink: 0;
   }
@@ -38,12 +42,12 @@
     max-width: 660px;
     display: flex;
     flex-direction: column;
-    grid-gap: 40px;
+    grid-gap: clamp(30px, 3.906vw, 40px);
   }
 
   &__title {
     max-width: 540px;
-    font-size: 48px;
+    font-size: clamp(42px, 4.688vw, 48px);
     line-height: 130%;
     font-weight: 500;
     letter-spacing: -0.02em;

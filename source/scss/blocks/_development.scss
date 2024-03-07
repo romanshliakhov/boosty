@@ -1,5 +1,22 @@
 .development {
-  margin-bottom: clamp(80px, 9.766vw, 100px);
+  padding: clamp(80px, 9.766vw, 100px) 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: var(--development-boosty);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 580px;
+    height: 755px;
+    top: 0;
+    right: 0;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 
   &__wrapp {
     display: flex;
@@ -14,7 +31,12 @@
   &__details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    align-items: stretch;
+    grid-gap: 20px 10px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__detail {
@@ -24,19 +46,25 @@
     background: rgba(217, 217, 217, 0.05);
     display: flex;
     flex-direction: column;
-    grid-gap: 30px;
+    grid-gap: clamp(20px, 3.906vw, 30px);
     line-height: 160%;
     color: rgba(251, 248, 243, 0.7);
 
     span {
+      // flex-grow: 1;
+      // min-height: 120px;
       display: block;
-      padding-bottom: 30px;
+      padding-bottom: clamp(20px, 3.906vw, 30px);
       border-bottom: 1px solid rgba(251, 248, 243, 0.3);
       font-size: 20px;
-      line-height: 150%;
       font-weight: 500;
-      letter-spacing: -0.02em;
       color: var(--color-green);
+
+      @media (max-width: 1024px) {
+        br {
+          display: none;
+        }
+      }
     }
   }
 }

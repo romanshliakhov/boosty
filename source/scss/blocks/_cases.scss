@@ -12,4 +12,106 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &__slider {
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      width: calc(100vw - clamp(20px, 5.208vw, 40px));
+    }
+  }
+
+  &__slide {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    border-radius: 16px;
+
+    &:nth-child(3n+1)::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: clamp(120px, 19.531vw, 150px);
+      filter: blur(150px);
+      background-color: #111d41;
+      border-radius: 16px;
+    }
+
+    &:nth-child(3n+2)::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: clamp(120px, 19.531vw, 150px);
+      filter: blur(150px);
+      background-color: #5f89f7;
+      border-radius: 16px;
+    }
+
+    &:nth-child(3n+3)::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: clamp(120px, 19.531vw, 150px);
+      filter: blur(150px);
+      background-color: #254de4;
+      border-radius: 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 248, 243, 0.2);
+
+    &-img {
+      height: clamp(176px, 26.042vw, 200px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-info {
+      padding: 0 30px 30px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    &-tag {
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 500;
+      color: var(--color-green);
+
+      @media (max-width: 576px) {
+        font-size: 14px;
+        line-height: 171%;
+      }
+    }
+
+    &-descr {
+      display: block;
+      margin-bottom: 30px;
+      font-size: clamp(18px, 2.604vw, 20px);
+      line-height: 150%;
+      font-weight: 500;
+      flex-grow: 1;
+    }
+  }
+
+  &__link {
+    svg {
+      fill: var(--color-primary);
+    }
+  }
 }
+

@@ -1,14 +1,55 @@
 .advisors {
   margin-bottom: clamp(80px, 9.766vw, 100px);
 
-  &__title {
+  &__top {
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__controls {
+    .controls__btn {
+      background-color: transparent;
+      border: 1px solid #424046;
+
+      svg {
+        fill: var(--color-white);
+      }
+
+      &:hover {
+        background-color: var(--color-green);
+        border: 1px solid transparent;
+
+        svg {
+          fill: #0e0e11;
+        }
+      }
+    }
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      width: 100vw;
+      overflow: initial;
+    }
   }
 
   &__members {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      grid-gap: 0;
+    }
   }
 
   &__member {
@@ -51,8 +92,8 @@
 
     &-avatar {
       display: flex;
-      width: 120px;
-      height: 120px;
+      width: clamp(80px, 11.719vw, 120px);
+      height: clamp(80px, 11.719vw, 120px);
       flex-shrink: 0;
 
       img {
@@ -69,6 +110,11 @@
       line-height: 130%;
       font-weight: 500;
       color: var(--color-green);
+    }
+
+    @media (max-width: 1024px) {
+      width: fit-content;
+      padding: 50px 42px 54px;
     }
   }
 }

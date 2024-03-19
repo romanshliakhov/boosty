@@ -142,6 +142,87 @@ let casesSlider = new Swiper('.cases__slider', {
   },
 });
 
+// Advisors Slider
+for (const advisorsSlider of document.querySelectorAll('.advisors__slider')) {
+  if (advisorsSlider) {
+    (function () {
+      "use strict";
+
+      const breakpoint = window.matchMedia("(min-width:1025px)");
+      let slider;
+
+      const enableSwiper = function () {
+        slider = new Swiper(advisorsSlider, {
+          slidesPerView: 'auto',
+          loop: true,
+          freeMode: true,
+          spaceBetween: 10,
+          observer: true,
+          observeParents: true,
+          adaptiveHeight: true,
+          navigation: {
+            nextEl: ".advisors-next",
+            prevEl: ".advisors-prev",
+            clickable: true,
+          },
+        });
+      };
+
+      const breakpointChecker = function () {
+        if (breakpoint.matches === true) {
+          if (slider !== undefined) slider.destroy(true, true);
+          return;
+        } else if (breakpoint.matches === false) {
+          return enableSwiper();
+        }
+      };
+
+      breakpoint.addListener(breakpointChecker);
+      breakpointChecker();
+    })();
+  }
+}
+
+// Инициализация Swiper
+let historySlider = new Swiper('.history__slider', {
+  observer: true,
+  observeParents: true,
+  slidesPerView: 'auto',
+  // loop: true,
+  // centeredSlides: true,
+  spaceBetween: 50,
+  mousewheel: true // Включаем прокрутку колесиком мыши
+});
+
+// Обработчик события прокрутки страницы
+window.addEventListener('scroll', function() {
+  var sliderElement = document.querySelector('.history__slider');
+  var sliderOffsetTop = sliderElement.offsetTop;
+  var sliderHeight = sliderElement.offsetHeight;
+  var windowScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var windowHeight = window.innerHeight;
+
+  // Проверка, находится ли пользователь в области слайдера
+  if (windowScrollTop >= sliderOffsetTop && windowScrollTop <= sliderOffsetTop + sliderHeight - windowHeight) {
+    // Останавливаем прокрутку страницы
+    document.body.style.overflow = 'hidden';
+
+    // Включаем прокрутку слайдера по колесику мыши
+    historySlider.allowTouchMove = true;
+  } else {
+    // Включаем обратно прокрутку страницы
+    document.body.style.overflow = '';
+
+    // Если пользователь на последнем слайде, отключаем прокрутку слайдера
+    if (historySlider.isEnd) {
+      historySlider.allowTouchMove = false;
+    }
+  }
+});
+
+
+
+
 
 
 

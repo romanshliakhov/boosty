@@ -6,7 +6,7 @@ body {
   position: relative;
   background-color: var(--color-main-bg);
   font-family: var(--font-family-twk);
-  font-size: 16px;
+  font-size: clamp(14px, 1.563vw, 16px);
   line-height: 150%;
   letter-spacing: -0.02em;
   font-weight: 400;

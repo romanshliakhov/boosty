@@ -4,4 +4,59 @@
   &__title {
     margin-bottom: 60px;
   }
+
+  &__slider {
+    width: 100vw;
+  }
+
+  &__wrapper {
+    padding-right: 550px;
+  }
+
+  &__slide {
+    max-width: 550px;
+    width: 100%;
+
+    &.swiper-slide-active {
+      .history__icon {
+
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__icon {
+    display: flex;
+
+    svg {
+
+    }
+  }
+
+  &__year {
+    font-size: clamp(80px, 9.766vw, 100px);
+    line-height: 100%;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--color-green);
+    color: #48464C;
+  }
+
+  &__text {
+    max-width: 350px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 160%;
+
+    p + p {
+      margin-top: 20px;
+    }
+  }
 }

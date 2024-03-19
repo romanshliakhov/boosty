@@ -3,12 +3,21 @@
 
   &__title {
     color: var(--color-green);
+
+    @media (max-width: 767px) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__lists {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__list {
@@ -22,14 +31,24 @@
       border-top: 1px solid transparent;
     }
 
-    &-img {
+    &-image {
       display: flex;
     }
 
     @media (max-width: 1024px) {
       &:first-child {
-        align-items: baseline;
+        align-items: center;
         justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 767px) {
+      min-height: clamp(95px, 23.177vw, 178px);
+
+      picture,
+      img {
+        width: 50%;
+        height: 50%;
       }
     }
   }

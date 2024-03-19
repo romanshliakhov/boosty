@@ -1,5 +1,17 @@
 .technologies {
+  position: relative;
   margin-bottom: clamp(80px, 9.766vw, 100px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: var(--main-gradient-v3);
+    background-size: cover;
+    right: 0;
+    width: clamp(867px, 71.111vw, 1024px);
+    height: 1517px;
+    z-index: -1;
+  }
 
   &__wrapp {
     display: flex;

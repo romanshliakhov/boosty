@@ -229,7 +229,8 @@ const swiper = new Swiper(('.history__slider'), {
   mousewheel: true,
   mousewheel: {
     sensitivity: 1.5
-  }
+  },
+  speed: 2000
 });
 
 let isEndReached = false;
@@ -239,7 +240,7 @@ window.addEventListener('scroll', function() {
   var sliderBounding = sliderElement.getBoundingClientRect();
   var windowHeight = window.innerHeight;
 
-  if (sliderBounding.top >= 0 && sliderBounding.bottom <= windowHeight && !isEndReached) {
+  if (sliderBounding.top <= windowHeight / 2 && !isEndReached ) {
     document.body.style.overflow = 'hidden';
     swiper.allowTouchMove = true;
   }
@@ -262,6 +263,26 @@ swiper.on('reachEnd', function () {
   isEndReached = true;
   swiper.mousewheel.disable();
 });
+
+// Добавляем обработчики событий для определения вертикального свайпа
+let touchStartY = 0;
+let touchMoveY = 0;
+swiper.el.addEventListener('touchstart', function(event) {
+  touchStartY = event.touches[0].clientY;
+});
+
+swiper.el.addEventListener('touchmove', function(event) {
+  touchMoveY = event.touches[0].clientY;
+});
+
+swiper.el.addEventListener('touchend', function() {
+  if (touchStartY - touchMoveY > 50) {
+    swiper.slidePrev(); // Листаем слайдер вверх
+  } else {
+    swiper.allowTouchMove = true; // Разрешаем свайп вниз
+  }
+});
+
 
 
 

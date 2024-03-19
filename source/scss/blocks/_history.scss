@@ -60,6 +60,10 @@
       border-top: 3px solid #454249;
       z-index: -1;
     }
+
+    svg {
+      transition: all 0.4s ease;
+    }
   }
 
   &__year {
@@ -70,6 +74,7 @@
     text-transform: uppercase;
     color: var(--color-green);
     color: #48464C;
+    transition: all 0.4s ease;
   }
 
   &__text {

@@ -71,6 +71,7 @@
     "gsap": "^3.12.5",
     "inputmask": "^5.0.7",
     "just-validate": "^3.3.3",
+    "locomotive-scroll": "^4.1.4",
     "lottie-web": "^5.9.6",
     "nouislider": "^15.6.0",
     "rellax": "^1.12.1",

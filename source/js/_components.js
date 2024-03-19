@@ -16,6 +16,7 @@ import './components/tabs.js';
 // import './components/showPassword.js';
 import './components/smoothScroll.js';
 // import './components/counterNumber.js';
+import './components/historyAnimation.js';
 
 
 

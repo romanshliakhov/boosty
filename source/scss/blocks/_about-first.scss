@@ -1,21 +1,63 @@
 .about-first {
   margin-bottom: clamp(60px, 6.944vw, 100px);
   position: relative;
-  overflow: hidden;
 
-  &::before {
-    content: '';
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   background-image: var(--main-gradient);
+  //   background-repeat: no-repeat;
+  //   width: 1111px;
+  //   height: 1056px;
+  //   top: 0;
+  //   right: 0;
+  // }
+
+  &__gradient {
     position: absolute;
-    background-image: var(--main-gradient);
-    background-repeat: no-repeat;
-    width: 1111px;
-    height: 1056px;
+    display: flex;
     top: 0;
     right: 0;
+    z-index: -1;
 
-    // @media (max-width: 576px) {
-    //   display: none;
-    // }
+    stop {
+      width: 1111px;
+      height: 1056px;
+      animation: gradientAnimation 30s linear infinite;
+    }
+  }
+
+  &__gradient-bottom {
+    position: absolute;
+    display: flex;
+    left: 0;
+    z-index: -1;
+
+    svg {
+      width: 575px;
+      height: 981px;
+      overflow: visible;
+
+      stop:nth-child(1) {
+        stop-color: #BCFB9F;
+        animation: changeColor1 20s infinite;
+      }
+
+      stop:nth-child(2) {
+        stop-color: #224B42;
+        animation: changeColor2 20s infinite;
+      }
+
+      stop:nth-child(3) {
+        stop-color: #607C56;
+        animation: changeColor3 20s infinite;
+      }
+
+      stop:nth-child(4) {
+        stop-color: #0E0C16;
+        animation: changeColor4 20s infinite;
+      }
+    }
   }
 
   &__icon {
@@ -48,18 +90,6 @@
       }
     }
   }
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   background-image: var(--about-first-boosty);
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   width: clamp(406px, 40.625vw, 585px);
-  //   height: clamp(462px, 45.139vw, 650px);
-  //   top: 110px;
-  //   right: 0;
-  // }
 
   .hero__slider {
     margin-top: clamp(30px, 4.167vw, 60px);
@@ -103,5 +133,83 @@
 @keyframes offset {
   to {
     stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    stop-color: #BCFB9F;
+  }
+  25% {
+    stop-color: #224B42;
+  }
+  50% {
+    stop-color: #607C56;
+  }
+  75% {
+    stop-color: #0E0C16;
+  }
+  100% {
+    stop-color: #BCFB9F;
+  }
+}
+
+// .about-first__gradient-bottom svg {
+//   overflow: visible;
+// }
+
+// .about-first__gradient-bottom svg stop:nth-child(1) {
+//   stop-color: #BCFB9F;
+//   animation: changeColor1 34s infinite;
+// }
+
+// .about-first__gradient-bottom svg stop:nth-child(2) {
+//   stop-color: #224B42;
+//   animation: changeColor2 34s infinite;
+// }
+
+// .about-first__gradient-bottom svg stop:nth-child(3) {
+//   stop-color: #607C56;
+//   animation: changeColor3 34s infinite;
+// }
+
+// .about-first__gradient-bottom svg stop:nth-child(4) {
+//   stop-color: #0E0C16;
+//   animation: changeColor4 34s infinite;
+// }
+
+@keyframes changeColor1 {
+  0%, 100% {
+    stop-color: #BCFB9F;
+  }
+  50% {
+    stop-color: rgba(255, 0, 255, 1);
+  }
+}
+
+@keyframes changeColor2 {
+  0%, 100% {
+    stop-color: #224B42;
+  }
+  50% {
+    stop-color: rgba(255, 0, 255, 1);
+  }
+}
+
+@keyframes changeColor3 {
+  0%, 100% {
+    stop-color: #607C56;
+  }
+  50% {
+    stop-color: rgba(255, 255, 0, 1);
+  }
+}
+
+@keyframes changeColor4 {
+  0%, 100% {
+    stop-color: #0E0C16;
+  }
+  50% {
+    stop-color: rgba(0, 255, 255, 1);
   }
 }

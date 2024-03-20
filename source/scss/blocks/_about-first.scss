@@ -2,17 +2,6 @@
   margin-bottom: clamp(60px, 6.944vw, 100px);
   position: relative;
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   background-image: var(--main-gradient);
-  //   background-repeat: no-repeat;
-  //   width: 1111px;
-  //   height: 1056px;
-  //   top: 0;
-  //   right: 0;
-  // }
-
   &__gradient {
     position: absolute;
     display: flex;
@@ -20,9 +9,12 @@
     right: 0;
     z-index: -1;
 
+    svg {
+      width: clamp(380px, 108.496vw, 1111px);
+      height: clamp(480px, 103.125vw, 1056px);
+    }
+
     stop {
-      width: 1111px;
-      height: 1056px;
       animation: gradientAnimation 30s linear infinite;
     }
   }
@@ -34,7 +26,7 @@
     z-index: -1;
 
     svg {
-      width: 575px;
+      width: clamp(357px, 56.152vw, 575px);
       height: 981px;
       overflow: visible;
 
@@ -153,30 +145,6 @@
     stop-color: #BCFB9F;
   }
 }
-
-// .about-first__gradient-bottom svg {
-//   overflow: visible;
-// }
-
-// .about-first__gradient-bottom svg stop:nth-child(1) {
-//   stop-color: #BCFB9F;
-//   animation: changeColor1 34s infinite;
-// }
-
-// .about-first__gradient-bottom svg stop:nth-child(2) {
-//   stop-color: #224B42;
-//   animation: changeColor2 34s infinite;
-// }
-
-// .about-first__gradient-bottom svg stop:nth-child(3) {
-//   stop-color: #607C56;
-//   animation: changeColor3 34s infinite;
-// }
-
-// .about-first__gradient-bottom svg stop:nth-child(4) {
-//   stop-color: #0E0C16;
-//   animation: changeColor4 34s infinite;
-// }
 
 @keyframes changeColor1 {
   0%, 100% {

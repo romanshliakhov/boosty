@@ -1,5 +1,8 @@
 .history {
   margin-bottom: clamp(80px, 9.766vw, 100px);
+  overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
 
   &__title {
     margin-bottom: 60px;
@@ -43,6 +46,19 @@
     display: flex;
     flex-direction: column;
     grid-gap: 40px;
+    // padding-left: 140px;
+
+    &.active {
+      .history__icon svg {
+        .green {
+          fill: var(--color-green);
+        }
+      }
+
+      .history__year {
+        color: var(--color-green);
+      }
+    }
   }
 
   &__icon {
@@ -56,6 +72,7 @@
       left: 0;
       transform: translateY(-50%);
       width: 100%;
+      width: 100vw;
       height: 3px;
       border-top: 3px solid #454249;
       z-index: -1;
@@ -90,15 +107,25 @@
 }
 
 
-.scroll {
-  width: 100vw !important;
-  height: 343px !important;
-}
+// .scroll {
+//   width: 100vw !important;
+//   height: 343px !important;
+// }
 
-.box {
-  width: 300%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  grid-gap: 250px;
-}
+// .box {
+//   width: 300%;
+//   height: 100%;
+//   display: flex;
+//   align-items: flex-start;
+//   grid-gap: 250px;
+// }
+
+// .history__timeline {
+//   display: flex;
+//   align-items: flex-start;
+//   grid-gap: 250px;
+// }
+
+// .history__box {
+//   margin-left: 140px;
+// }

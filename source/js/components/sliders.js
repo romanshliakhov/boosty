@@ -183,53 +183,12 @@ for (const advisorsSlider of document.querySelectorAll('.advisors__slider')) {
   }
 }
 
-// // Инициализация Swiper
-// let historySlider = new Swiper('.history__slider', {
-//   observer: true,
-//   observeParents: true,
-//   slidesPerView: 'auto',
-//   // loop: true,
-//   // centeredSlides: true,
-//   spaceBetween: 50,
-//   mousewheel: true // Включаем прокрутку колесиком мыши
-// });
-
-// // Обработчик события прокрутки страницы
-// window.addEventListener('scroll', function() {
-//   var sliderElement = document.querySelector('.history__slider');
-//   var sliderOffsetTop = sliderElement.offsetTop;
-//   var sliderHeight = sliderElement.offsetHeight;
-//   var windowScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//   var windowHeight = window.innerHeight;
-
-//   // Проверка, находится ли пользователь в области слайдера
-//   if (windowScrollTop >= sliderOffsetTop && windowScrollTop <= sliderOffsetTop + sliderHeight - windowHeight) {
-//     // Останавливаем прокрутку страницы
-//     document.body.style.overflow = 'hidden';
-
-//     // Включаем прокрутку слайдера по колесику мыши
-//     historySlider.allowTouchMove = true;
-//   } else {
-//     // Включаем обратно прокрутку страницы
-//     document.body.style.overflow = '';
-
-//     // Если пользователь на последнем слайде, отключаем прокрутку слайдера
-//     if (historySlider.isEnd) {
-//       historySlider.allowTouchMove = false;
-//     }
-//   }
-// });
-
-
-
+// History Slider
 const swiper = new Swiper(('.history__slider'), {
   slidesPerView: 'auto',
   observer: true,
   observeParents: true,
   mousewheel: true,
-  mousewheel: {
-    sensitivity: 1.5
-  },
   speed: 2000
 });
 
@@ -245,17 +204,6 @@ window.addEventListener('scroll', function() {
     swiper.allowTouchMove = true;
   }
 });
-
-document.addEventListener('wheel', function(event) {
-  if (document.body.style.overflow === 'hidden') {
-    // Прокручиваем слайдер в зависимости от направления колеса мыши
-    if (event.deltaY < 0) {
-      swiper.slidePrev();
-    } else {
-      swiper.slideNext();
-    }
-  }
-}, { passive: false });
 
 swiper.on('reachEnd', function () {
   swiper.allowTouchMove = false;
@@ -282,6 +230,7 @@ swiper.el.addEventListener('touchend', function() {
     swiper.allowTouchMove = true; // Разрешаем свайп вниз
   }
 });
+
 
 
 

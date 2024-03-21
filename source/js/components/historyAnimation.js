@@ -1,40 +1,61 @@
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import LocomotiveScroll from "locomotive-scroll";
 
 // gsap.registerPlugin(ScrollTrigger);
 
-// let sections = gsap.utils.toArray(".scroll .panel");
-// let container = document.querySelector('.box');
+// const pageContainer = document.querySelector(".main");
 
-// let scrollTween = gsap.to(sections, {
-//   xPercent: -100 * (sections.length - 1),
-//   ease: "none",
-//   duration: 6,
-//   scrollTrigger: {
-//     trigger: ".scroll",
-//     pin: true,
-//     scrub: true,
-//     end: () => `+=${container.offsetWidth}`
-//   }
+// /* SMOOTH SCROLL */
+// const scroller = new LocomotiveScroll({
+//   el: pageContainer,
+//   smooth: true
 // });
 
+// scroller.on("scroll", ScrollTrigger.update);
 
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// ScrollTrigger.scrollerProxy(pageContainer, {
+//   scrollTop(value) {
+//     return arguments.length
+//       ? scroller.scrollTo(value, 0, 0)
+//       : scroller.scroll.instance.scroll.y;
+//   },
+//   getBoundingClientRect() {
+//     return {
+//       left: 0,
+//       top: 0,
+//       width: window.innerWidth,
+//       height: window.innerHeight
+//     };
+//   },
+//   pinType: pageContainer.style.transform ? "transform" : "fixed"
+// });
 
-// gsap.registerPlugin(ScrollTrigger);
+// ////////////////////////////////////
+// ////////////////////////////////////
+// window.addEventListener("load", function () {
+//   let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+//   let pinWrap = document.querySelector(".pin-wrap");
+//   let pinWrapWidth = pinWrap.offsetWidth;
+//   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
 
-// let sections = gsap.utils.toArray(".scroll .panel");
-// let container = document.querySelector('.box');
+//   // Pinning and horizontal scrolling
 
-// let scrollTween = gsap.to(sections, {
-//   xPercent: -100 * (sections.length - 1), // Используем xPercent для горизонтальной прокрутки
-//   ease: "none",
-//   duration: 6,
-//   scrollTrigger: {
-//     trigger: ".scroll",
-//     pin: true,
-//     scrub: true,
-//     end: () => `+=${container.offsetWidth}` // Используем offsetWidth для горизонтального скролла
-//   }
+//   gsap.to(".pin-wrap", {
+//     scrollTrigger: {
+//       scroller: pageContainer, //locomotive-scroll
+//       scrub: true,
+//       trigger: "#sectionPin",
+//       pin: true,
+//       anticipatePin: 1,
+//       start: "center center",
+//       end: pinWrapWidth
+//     },
+//     x: -horizontalScrollLength,
+//     ease: "none"
+//   });
+
+//   ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+//   ScrollTrigger.refresh();
 // });

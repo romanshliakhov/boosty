@@ -183,54 +183,161 @@ for (const advisorsSlider of document.querySelectorAll('.advisors__slider')) {
   }
 }
 
-// History Slider
-const swiper = new Swiper(('.history__slider'), {
-  slidesPerView: 'auto',
-  observer: true,
-  observeParents: true,
-  mousewheel: true,
-  speed: 2000
-});
+// // History Slider
+const historySlider = document.querySelector('.history__slider');
 
-let isEndReached = false;
+if(historySlider){
+  const swiper = new Swiper(historySlider, {
+    slidesPerView: 'auto',
+    observer: true,
+    observeParents: true,
+    mousewheel: true,
+    speed: 1300,
 
-window.addEventListener('scroll', function() {
-  var sliderElement = document.querySelector('.history__slider');
-  var sliderBounding = sliderElement.getBoundingClientRect();
-  var windowHeight = window.innerHeight;
+    breakpoints: {
+      320: {
+        speed: 500,
+      },
+      768: {
+        speed: 1300,
+      },
+    },
+  });
 
-  if (sliderBounding.top <= windowHeight / 2 && !isEndReached ) {
-    document.body.style.overflow = 'hidden';
-    swiper.allowTouchMove = true;
+    const bodyEl = document.body,
+    sliderElement = document.querySelector('.history__wrapp'),
+    sensitivity = 10,
+    scrollInterval = 1500;
+    let canScroll = true,
+    parametersInit = null,
+    resizeTimer,
+    flag = false,
+    lastWindowWidth = window.innerWidth,
+    offsetPercent;
+
+    function isElementCentered(element) {
+      var viewportHeight = window.innerHeight;
+      var elementBounding = element.getBoundingClientRect();
+      var elementCenterRelativeToViewport = elementBounding.top + element.clientHeight / 2;
+
+      var offsetFromCenter = (viewportHeight * offsetPercent) / 100;
+
+      return elementCenterRelativeToViewport >= viewportHeight / 2 - element.clientHeight / 2 - offsetFromCenter &&
+            elementCenterRelativeToViewport <= viewportHeight / 2 + element.clientHeight / 2 - offsetFromCenter;
+    }
+
+    function disableFixed(body, slider, interval){
+      setTimeout(() => {
+        body.classList.remove('fixed');
+        slider.mousewheel.disable();
+      }, interval);
+    }
+
+    function checkFixed() {
+      var isCentered = isElementCentered(sliderElement);
+      if (isCentered && !flag) {
+        bodyEl.classList.add('fixed');
+        flag = true;
+      }
+      if (!isCentered) {
+        bodyEl.classList.remove('fixed');
+        flag = false;
+      }
+    }
+
+  function parametersSlider(){
+    swiper.slides.forEach((slide, index) => {
+      slide.addEventListener('click', function() {
+        swiper.slideTo(index);
+      });
+    });
+
+    window.addEventListener('wheel', function(event) {
+      if (event.deltaY < 0) {
+        offsetPercent = -10;
+      } else {
+        offsetPercent = 15;
+      }
+      var isCentered = isElementCentered(sliderElement);
+
+      checkFixed();
+      const deltaY = event.deltaY / sensitivity;
+
+      if (bodyEl.classList.contains('fixed')) {
+        if (deltaY > 0 && canScroll) {
+          if(swiper.isEnd){
+            disableFixed(bodyEl, swiper, 0);
+          }
+          swiper.slideNext();
+          canScroll = false;
+          setTimeout(() => { canScroll = true; }, scrollInterval);
+
+          swiper.on('reachEnd', function() {
+            disableFixed(bodyEl, swiper, scrollInterval);
+
+            if (!isCentered) {
+              flag = false;
+            }
+          });
+        } else if (deltaY < 0 && canScroll) {
+          if (swiper.activeIndex === 0) {
+            disableFixed(bodyEl, swiper, 0);
+          }
+          swiper.slidePrev();
+          canScroll = false;
+          setTimeout(() => { canScroll = true; }, scrollInterval);
+
+          swiper.on('reachBeginning', function() {
+            disableFixed(bodyEl, swiper, scrollInterval);
+
+            if (!isCentered) {
+              flag = false;
+            }
+          });
+        }
+      }
+    });
+
+    window.addEventListener('scroll', function(e) {
+      var isCentered = isElementCentered(sliderElement);
+      checkFixed();
+    });
   }
-});
 
-swiper.on('reachEnd', function () {
-  swiper.allowTouchMove = false;
-  document.body.style.overflow = '';
-  isEndReached = true;
-  swiper.mousewheel.disable();
-});
-
-// Добавляем обработчики событий для определения вертикального свайпа
-let touchStartY = 0;
-let touchMoveY = 0;
-swiper.el.addEventListener('touchstart', function(event) {
-  touchStartY = event.touches[0].clientY;
-});
-
-swiper.el.addEventListener('touchmove', function(event) {
-  touchMoveY = event.touches[0].clientY;
-});
-
-swiper.el.addEventListener('touchend', function() {
-  if (touchStartY - touchMoveY > 50) {
-    swiper.slidePrev(); // Листаем слайдер вверх
-  } else {
-    swiper.allowTouchMove = true; // Разрешаем свайп вниз
+  function initFunction(breakpoint) {
+    let containerWidth = document.documentElement.clientWidth;
+    if (containerWidth >= breakpoint) {
+      if (!parametersInit) {
+        parametersSlider();
+        parametersInit = true;
+      }
+    } else {
+      parametersInit = false;
+    }
   }
-});
 
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+
+    let currentWindowWidth = window.innerWidth;
+    if (currentWindowWidth !== lastWindowWidth) {
+      lastWindowWidth = currentWindowWidth;
+
+      if (currentWindowWidth < 768) {
+        resizeTimer = setTimeout(() => {
+          initFunction(768);
+          location.reload();
+        }, 300);
+      } else {
+        initFunction(768);
+      }
+    }
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initFunction(768);
+  });
+}
 
 
 

@@ -10,6 +10,7 @@
 
   &__slider {
     width: 100vw;
+    overflow: initial;
   }
 
   &__wrapper {
@@ -19,10 +20,26 @@
   }
 
   &__slide {
-    max-width: 550px;
+    max-width: clamp(400px, 71.708vw, 550px);
     width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease;
 
     &.swiper-slide-active {
+      .history__icon svg {
+        transition: all 0.4s ease;
+
+        .green {
+          fill: var(--color-green);
+        }
+      }
+
+      .history__year {
+        color: var(--color-green);
+      }
+    }
+
+    &:hover {
       .history__icon svg {
         .green {
           fill: var(--color-green);
@@ -42,23 +59,24 @@
   }
 
   &__box {
+    width: fit-content;
     position: relative;
     display: flex;
     flex-direction: column;
     grid-gap: 40px;
-    // padding-left: 140px;
+    transition: all 0.4s ease;
 
-    &.active {
-      .history__icon svg {
-        .green {
-          fill: var(--color-green);
-        }
-      }
+    // &:hover {
+    //   .history__icon svg {
+    //     .green {
+    //       fill: var(--color-green);
+    //     }
+    //   }
 
-      .history__year {
-        color: var(--color-green);
-      }
-    }
+    //   .history__year {
+    //     color: var(--color-green);
+    //   }
+    // }
   }
 
   &__icon {
@@ -79,7 +97,9 @@
     }
 
     svg {
-      transition: all 0.4s ease;
+      .green {
+        transition: all 0.4s ease;
+      }
     }
   }
 
@@ -89,7 +109,6 @@
     font-weight: 500;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: var(--color-green);
     color: #48464C;
     transition: all 0.4s ease;
   }

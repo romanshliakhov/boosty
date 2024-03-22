@@ -11,20 +11,20 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
-const svgmin = require('gulp-svgmin');
-const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace');
+// const svgmin = require('gulp-svgmin');
+// const cheerio = require('gulp-cheerio');
+// const replace = require('gulp-replace');
 const fileInclude = require('gulp-file-include');
 const rev = require('gulp-rev');
 const revRewrite = require('gulp-rev-rewrite');
 const revDel = require('gulp-rev-delete-original');
-const resolve = require('resolve');
+// const resolve = require('resolve');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-imagemin');
 
-const webpack = require('webpack');
+// const webpack = require('webpack');
 
 const {readFileSync} = require('fs');
 
@@ -46,11 +46,7 @@ const buildFolder = './build';
 const paths = {
   srcSvg: `${srcFolder}/img/sprite/*.svg`,
   srcImgFolder: `${srcFolder}/img`,
-  srcVideoFolder: `${srcFolder}/video`,
-  srcAudioFolder: `${srcFolder}/audio`,
   buildImgFolder: `${buildFolder}/img`,
-  buildVideoFolder: `${buildFolder}/video`,
-  buildAudioFolder: `${buildFolder}/audio`,
   buildSpriteFolder: `${buildFolder}/img/sprite`,
   srcScss: `${srcFolder}/scss/**/*.scss`,
   buildCssFolder: `${buildFolder}/css`,
@@ -83,12 +79,13 @@ const faviconIcon = () => {
 //svg sprite
 const svgSprites = () => {
   return src(paths.srcSvg)
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(dest(paths.buildSpriteFolder));
+      .pipe(svgstore({
+        inlineSvg: true
+      }))
+      .pipe(rename("sprite.svg"))
+      .pipe(dest(paths.buildSpriteFolder));
 }
+
 
 // scss styles
 const styles = () => {
@@ -102,7 +99,7 @@ const styles = () => {
     .pipe(mainSass())
     .pipe(autoprefixer({
       cascade: false,
-      // grid: true,
+      grid: true,
       overrideBrowserslist: ["last 5 versions"]
     }))
     .pipe(gulpif(isProd, cleanCSS({
@@ -111,6 +108,7 @@ const styles = () => {
     .pipe(dest(paths.buildCssFolder, { sourcemaps: '.' }))
     .pipe(browserSync.stream());
 };
+
 
 // styles backend
 const stylesBackend = () => {
@@ -244,25 +242,21 @@ const resources = () => {
 const images = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif,ico}`])
     .pipe(gulpif(isProd, image([
-      image.mozjpeg({
-        quality: 80,
-        progressive: true
-      }),
-      image.optipng({
-        optimizationLevel: 2
-      }),
+      // image.mozjpeg({
+      //   quality: 80,
+      //   progressive: true
+      // }),
+      // image.optipng({
+      //   optimizationLevel: 2
+      // }),
     ])))
     .pipe(dest(paths.buildImgFolder))
 };
 
-const video = () => {
-  return src([`${paths.srcVideoFolder}/**/**.{mp4,webm}`])
-    .pipe(dest(paths.buildVideoFolder));
-};
 
-const audio = () => {
-  return src([`${paths.srcAudioFolder}/**/**.mp3`])
-    .pipe(dest(paths.buildAudioFolder));
+const video = () => {
+  return src([`${paths.srcImgFolder}/**/**.{mp4,webm}`])
+    .pipe(dest(paths.buildImgFolder));
 };
 
 const webpImages = () => {
@@ -299,15 +293,14 @@ const watchFiles = () => {
   watch(`${paths.srcPartialsFolder}/**/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
-  watch(`${paths.srcAudioFolder}/**/**.{mp3}`, audio);
-  watch(`${paths.srcVideoFolder}/**/**.{webm,mp4,MPEG-4}`, video);
+  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,gif}`, images);
+  watch(`${paths.srcImgFolder}/**/**.{webm,mp4,MPEG-4}`, video);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(paths.srcSvg, svgSprites);
 }
 
 const cache = () => {
-  return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2,pdf,woff,webm,mp4,mp3}`, {
+  return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2, pdf,woff,webm, mp4}`, {
       base: buildFolder
     })
     .pipe(rev())
@@ -357,11 +350,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, pdfInclude, json, scripts, styles, resources, faviconIcon ,images, webpImages, audio, video, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, pdfInclude, json, scripts, styles, resources, faviconIcon ,images,  webpImages, video, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, audio, video, images, webpImages, svgSprites)
+exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, video,images, webpImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, json, scripts, styles, resources, faviconIcon , audio, video, images, webpImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, json, scripts, styles, resources, faviconIcon ,video,images, webpImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
